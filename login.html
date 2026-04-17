@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <div Class="titulo-form">
+<h2 Class="titulo-login"> LOGIN</h2>
+
+<form> 
+    <label class="email-texto" for="email">E-mail:</label>
+    <input type="text" id="email">
+    <label  class="senha-texto" for="senha"> Senha:</label>
+    <input type="text"  id="senha">
+    <button type = "button" id="button" onclick="validarFormulario()">Enviar</button>
+</form>
+</div>
+<script>
+
+function validarFormulario(){
+
+let link = document.createElement ("a")
+
+ 
+ let email = document.getElementById("email").value
+ let senha = document.getElementById("senha").value
+ var emailRegex =/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+ link.href = "./pagina2.html";
+ link.textContent = "VISITAR"
+
+ if(email == "" || senha == ""){
+     alert("Por favor insira algum dado!")
+ }
+
+ if(!emailRegex.test(email)){
+    alert("Por favor, insira um valor válido de email ")
+ }
+
+ if(senha.length > 6 ){
+     alert("Essa senha está muito longa, digite menor que 6 dígitos!")
+ }
+
+    alert("Login realizado com sucesso!")
+
+    window.location.href = "./pagina2.html";
+
+ }
+
+</script>
+
+
+</body>
+</html>
