@@ -1,11 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h4>OLA</h4>
-</body>
+    <link rel="stylesheet" href="./Stylehome.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="conteudo_nav">
+        <img src="./v.png" alt="logo aviao" />
+        <h2>Atlas Travel</h2>
+        <ul>
+          <li><a href="./pagina2.html">Home</a></li>
+          <li><a href="./cadastro.html">Cadastro</a></li>
+          <li><a href="destino.html">Destino</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="conteudo_titulo">
+      <h1>Bem-vindos!</h1>
+      <p>
+        De praias paradisíacas a cidades cheias de história, o próximo destino
+        perfeito está a apenas alguns cliques de distância. Prepare as malas,<br />
+        viva novas culturas e colecione memórias únicas. Sua próxima viagem
+        começa aqui. 🌍✈️
+      </p>
+    </div>
+
+    <section>
+      <h3 class="conteudo_titulo_cards">Nossos Serviços</h3>
+      <div class="conteudo_principal_cards">
+        <div class="conteudo_card">
+          <img
+            class="img_card_1"
+            src="./passagem.png"
+            alt="tiquet de passagem"
+          />
+          <p class="subtitulo_card">Passagem</p>
+        </div>
+        <div class="conteudo_card2">
+          <img class="img_card_2" src="./seguro.png" alt="tiquet de seguros" />
+          <p class="subtitulo_card">Seguros</p>
+        </div>
+        <div class="conteudo_card3">
+          <img class="img_card_3" src="./roteiro.png" alt="tiquet de seguros" />
+          <p class="subtitulo_card">Roteiros</p>
+        </div>
+      </div>
+    </section>
+
+    <h4>O que você procura?</h4>
+    <form>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            nome="interesse"
+            value="Praiano"
+          />Praiano </label
+        ><br />
+      </div>
+
+      <div>
+        <label>
+          <input 
+          id="check"
+            type="checkbox"
+            nome="interesse"
+            value="Montanha"
+          />Montanha </label
+        ><br />
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" nome="interesse" value="Neve" />Neve </label
+        ><br />
+      </div>
+    </form>
+
+    <div id="campo"  class="card_procura">
+
+      <img  class="card_img_paris"   src="paris.png" alt="paris" />
+      <div class="texto_card">
+        <h5>Paris, França</h5>
+        <p><strong> Clima</strong> </p>
+        <p>Temperado (4 Estações)</p>
+        <p><strong>Moeda</strong></p>
+        <p>Euro (EUR)</p>
+      </div>
+    </div>
+   <script>
+    const checkbox = document.getElementById("check")
+    const campo = document.getElementById("campo")
+
+    checkbox.addEventListener("change", () =>{
+      campo.classList.toggle("card_procura")
+    } );
+   </script>
+
+  </body>
 </html>

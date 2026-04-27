@@ -1,53 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./Stylecadastro.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./Stylecadastro.css" />
+  </head>
+  <body>
+      <nav>
+      <div class="conteudo_nav">
+        <img src="./v.png" alt="logo aviao" />
+        <ul>
+          <li><a href="pagina2.html">Home</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="destino.html">Destino</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="Form_pincipal">
-    <h3>Solicite o seu Orçamento</h3>
-<form >
-<input type="text" id="nome">
-<input type="text" id="email">
-<input type="text" id="cep" placeholder="cep">
-<input type="text" id="rua">
-<input type="text" id="bairro">
-<input type="text" id="cidade">
-<input type="text" id="estado" >
-<button onclick="pesquisaCep()" type="button"  id="button">Enviar Solicitação</button>
+      <h3>Solicite Seu Orçamento</h3>
+      <form>
+        <label for="">Nome:</label>
+        <input type="text" id="nome" />
+        <label for="">E-mail:</label>
+        <input type="text" id="email" />
+        <div>
+          <label for="">CEP:</label>
+          <input type="text" id="cep" placeholder="cep" maxlength="8" />
+          <button type="button" onclick="pesquisaCep()" id="button_busca">
+            Buscar
+          </button>
+        </div>
+        <label for="">Rua:</label>
+        <input type="text" id="rua" />
+        <label for="">Bairro:</label>
+        <input type="text" id="bairro" />
+        <label for="">Cidade:</label>
+        <input type="text" id="cidade" />
+        <label for="">Estado:</label>
+        <input type="text" id="estado" />
+        <button onclick="validarCadastro()" type="button" id="button">
+          Enviar Solicitação
+        </button>
+      </form>
+    </div>
 
-</form>
-</div>
+    <script>
+      function validarCadastro() {
+        let nome = document.getElementById("nome").value;
+        let email = document.getElementById("email").value;
 
-<script>
- function pesquisaCep(){
-   const cep = document.getElementById("cep").value
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-    .then(Response => {
-   if(!Response.ok){
-    throw new Erro("Erro na requisição"+ Response.status)
-   }
-   return Response.json()
- })
-    .then(dados => {
-      if(dados.erro){
-        alert("Esse CEP não foi encontrado ")
+        if (nome == "" || email == "") {
+          alert("Por favor, preencha os campos ");
+          return;
+        }
+        if (!emailRegex.test(email)) {
+          alert("Por favor, insira um e-mail válido");
+          return;
+        }
+        alert("Cadastro bem sucedido!!");
+        window.location.href = "./login.html";
       }
-        document.getElementById("rua").value = dados.logradouro
-        document.getElementById("bairro").value = dados.bairro
-        document.getElementById("cidade").value = dados.localidade
-        document.getElementById("estado").value = dados.uf
 
-    })
-    .catch(erro =>{
-        console.log(erro.message)
-    })
-}
-</script>
-</body>
+      function pesquisaCep() {
+        const cep = document.getElementById("cep").value;
+
+        if (cep.length !== 8) {
+          alert("Cep precisar ter 8 numeros");
+          return;
+        }
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+          .then((Response) => {
+            if (!Response.ok) {
+              throw new Error("Erro na requisição" + Response.status);
+            }
+            return Response.json();
+          })
+          .then((dados) => {
+            if (dados.erro) {
+              alert("Esse CEP não foi encontrado ");
+            }
+            document.getElementById("rua").value = dados.logradouro;
+            document.getElementById("bairro").value = dados.bairro;
+            document.getElementById("cidade").value = dados.localidade;
+            document.getElementById("estado").value = dados.uf;
+          })
+          .catch((erro) => {
+            console.log(erro.message);
+          });
+      }
+    </script>
+  </body>
 </html>
