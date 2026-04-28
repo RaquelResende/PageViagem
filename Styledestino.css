@@ -4,10 +4,14 @@
   text-decoration: none;
 }
 
-body {
-  background-image: url(ceu.png);
+body 
+{
+    background-image: url(ceu.png);
   /* background-repeat: no-repeat; */
   font-family: "Times New Roman", Times, serif;
+  background-attachment: fixed;
+  font-size: 110%;
+  background-size: 100%;
 }
 
 nav {

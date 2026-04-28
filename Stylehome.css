@@ -9,6 +9,8 @@ body {
   /* background-repeat: no-repeat; */
   font-family: "Times New Roman", Times, serif;
   background-attachment: fixed;
+  font-size: 110%;
+  background-size: 100%;
 }
 nav {
   position: fixed;
@@ -81,9 +83,8 @@ p {
 .conteudo_card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-left: 35%;
-  margin-top: 20px;
+  /* align-items: center; */
+  margin-top: 30px;
 
   /* gap: 3px; */
   width: 90px;
@@ -92,7 +93,6 @@ p {
   box-shadow: 0px 4px 8px;
   background: rgb(113, 167, 244, 0.2p);
   backdrop-filter: blur(2px);
-
   transition: transform 0.3s ease; /* animação suave */
 }
 .img_card_1 {
@@ -111,8 +111,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 5%;
-  margin-top: 20px;
+  margin-top: 30px;
 
   /* gap: 3px; */
   width: 90px;
@@ -132,6 +131,8 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 4%;
 }
 .img_card_2 {
   width: 92%;
@@ -141,8 +142,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 5%;
-  margin-top: 20px;
+  margin-top: 30px;
+ 
 
   /* gap: 3px; */
   width: 90px;
@@ -161,6 +162,17 @@ p {
   width: 92%;
   margin-top: 15%;
 }
+.conteudo_boxcheck{
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  margin-top: 5%;
+ 
+
+}
+
 section {
   border-radius: 10px;
   box-shadow: 0px 4px 8px;
@@ -170,22 +182,22 @@ section {
 }
 .card_procura
  {
-  display: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+ 
   box-shadow: 0px 4px 8px;
   border-radius: 10px;
   background: rgb(146, 173, 244, 0.2);
   backdrop-filter: blur(2px);
   width: 30%;
-  margin-left: 38%;
+
 }
 .texto_card {
+
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
 }
 p {
   padding: 3px;
@@ -193,11 +205,30 @@ p {
 h5 {
   font-size: 20px;
 }
-.card_img_paris {
-  width: 50%;
+.card_img_praia  {
+ 
+  width: 60%;
+  margin-top: 10%;
+  padding-left: 20%;
+}
+
+.card_img_mantonha{
+  width: 60%;
   margin-top: 10%;
   transition: tranform 0.3s ease;
+  padding-left: 20%;
+
 }
-.card_img_paris:hover {
-  transform: scale(1.1);
+
+h4{
+  font-size: 130%;
 }
+.conteudo_form_checkbox{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: start;
+  margin-left: 48%;
+}
+
+

@@ -29,6 +29,7 @@
     </div>
 
     <section>
+      
       <h3 class="conteudo_titulo_cards">Nossos Serviços</h3>
       <div class="conteudo_principal_cards">
         <div class="conteudo_card">
@@ -50,13 +51,16 @@
       </div>
     </section>
 
-    <h4>O que você procura?</h4>
-    <form>
-      <div>
+    <form class="conteudo_boxcheck">
+     <h4 > O que você procura?</h4>
+
+     <div class="conteudo_form_checkbox">
+      <div  > 
         <label>
           <input
+              id="check1"
             type="checkbox"
-            nome="interesse"
+            name="interesse"
             value="Praiano"
           />Praiano </label
         ><br />
@@ -65,9 +69,9 @@
       <div>
         <label>
           <input 
-          id="check"
+          id="check2"
             type="checkbox"
-            nome="interesse"
+            name="interesse"
             value="Montanha"
           />Montanha </label
         ><br />
@@ -75,29 +79,96 @@
 
       <div>
         <label>
-          <input type="checkbox" nome="interesse" value="Neve" />Neve </label
+          <input type="checkbox" name="interesse" value="Neve"  id ="check3"/>Neve </label
         ><br />
       </div>
     </form>
 
     <div id="campo"  class="card_procura">
 
-      <img  class="card_img_paris"   src="paris.png" alt="paris" />
+      <img  class="card_img_praia"   src="praia.png" alt="paris" />
       <div class="texto_card">
-        <h5>Paris, França</h5>
+        <h5>Rio de janeiro, Brasil</h5>
         <p><strong> Clima</strong> </p>
         <p>Temperado (4 Estações)</p>
         <p><strong>Moeda</strong></p>
-        <p>Euro (EUR)</p>
+        <p>Real (BR)</p>
       </div>
-    </div>
-   <script>
-    const checkbox = document.getElementById("check")
-    const campo = document.getElementById("campo")
 
-    checkbox.addEventListener("change", () =>{
-      campo.classList.toggle("card_procura")
-    } );
+
+
+     </div>
+     
+     <div id="campo2"  class="card_procura">
+
+      <img  class="card_img_mantonha"   src="montanha.png" alt="montanha" />
+      <div class="texto_card">
+        <h5>Nova Zelândia</h5>
+        <p><strong> Clima</strong> </p>
+        <p>Temperad (marítimo)</p>
+        <p><strong>Moeda</strong></p>
+        <p>Dólar neozelandês</p>
+      </div>
+
+
+
+     </div>
+
+      <div id="campo3"  class="card_procura">
+
+      <img  class="card_img_mantonha"   src="neve.png" alt="neve" />
+      <div class="texto_card">
+        <h5>Interlaken, Suíça</h5>
+        <p><strong> Clima</strong> </p>
+        <p> temperado oceânico</p>
+        <p><strong>Moeda</strong></p>
+        <p>Franco suíço </p>
+      </div>
+
+    </div>  
+  </div>
+      
+
+
+
+
+   <script>
+    const checkboxpraia = document.getElementById("check1")
+     const checkboxmonanha = document.getElementById("check2")
+     const checkboxneve = document.getElementById("check3")
+  
+     const campo2 = document.getElementById("campo2")
+     const campo = document.getElementById("campo")
+
+     const campo3 = document.getElementById("campo3")
+ 
+    function ataualizar(){
+    if(checkboxpraia.checked  ){
+      (campo.style.display = "block") 
+    }
+     else{
+      (campo.style.display = "none")
+
+    }
+    if(checkboxmonanha.checked){
+    (campo2.style.display = "block")
+
+    }
+    else{
+      (campo2.style.display = "none") 
+    }
+
+    if(checkboxneve.checked){
+      (campo3.style.display= "block")
+    }
+    else{
+      (campo3.style.display = "none")
+    }
+    };
+
+    checkboxmonanha.addEventListener("change", ataualizar);
+    checkboxpraia.addEventListener("change", ataualizar)
+    checkboxneve.addEventListener("change", ataualizar )
    </script>
 
   </body>
