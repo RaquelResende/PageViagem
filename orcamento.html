@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Styledestino.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="conteudo_nav">
+        <img src="./v.png" alt="logo aviao" />
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./cadastro.html">Cadastro</a></li>
+          <li><a href="orcamento.html">Destino</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="Form_pincipal_orçamento">
+      <h3 class="titulo_orçamento">Realize o seu Cadastro!</h3>
+      <form class="form_orçamento">
+        <label for="">Nome Completo:</label>
+        <input type="text" id="nome" />
+        <label for="">E-mail de Contato:</label>
+        <input type="text" id="email" />
+        <label for="">Data Desejada:</label>
+        <input type="date" id="data" placeholder="dd/mm/aaaa" maxlength="10" />
+        <label for="">Detalhes da Viagem:</label>
+        <input type="text" id="descricao" />
+        <button class="botao_orçamento"
+          type="button"
+          onclick="orcamentoEnviado()"
+          id="button_busca">
+          Enviar Solicitação </button>
+          
+        </button>
+      </form>
+    </div>
+
+    <footer>
+      Meu Site - Todos os direitos Reservados - 2026
+      <p>Tel: 55(21)9392-9292 | Contato: AtlasTravel@gmai.com</p>
+    </footer>
+    <script>
+      function orcamentoEnviado() {
+        let nome = document.getElementById("nome").value;
+        let email = document.getElementById("email").value;
+        let data = document.getElementById("data").value;
+        let descricao = document.getElementById("descricao").value;
+
+        if (nome == "" || email == "" || data == "" || descricao == "") {
+          alert("Um dos campos não foi preenchido, por favor preencher!");
+          return;
+        }
+
+        alert("Orçamento enviado com sucesso!");
+      }
+    </script>
+  </body>
+</html>

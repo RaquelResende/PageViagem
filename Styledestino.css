@@ -4,8 +4,7 @@
   text-decoration: none;
 }
 
-body 
-{
+body {
   background-image: url(ceu.png);
   /* background-repeat: no-repeat; */
   font-family: "Times New Roman", Times, serif;
@@ -60,8 +59,63 @@ img {
   margin-top: 5px;
 }
 
-footer{
-  width: 100%;
+.Form_pincipal_orçamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px;
+  background: rgba(175, 196, 244, 0.2);
+  backdrop-filter: blur(5px);
+  width: 30%;
+  height: 50%;
+  margin-left: 35%;
+}
+.titulo_orçamento {
+  margin: 5%;
+}
+.form_orçamento {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 90%;
+  font-size: 15px;
+}
+.input data {
+  display: flex;
+  background: #09ba27;
+}
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #060505; /* linha */
+  outline: none;
+  color: #474444;
+  gap: 3px;
+}
+.input #descricao {
+  width: 10px;
+}
+
+.botao_orçamento {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16%;
+  padding: 2px;
+  background-color: rgb(37, 65, 108);
+  width: 70%;
+  border-radius: 6px;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  color: #fff;
+  cursor: pointer;
+
+  border: 5px;
+}
+footer {
   padding: 6% 1% 8%;
   background: rgba(62, 96, 128, 0.3);
   backdrop-filter: blur(5px);
@@ -70,6 +124,6 @@ footer{
   color: #3c3c41;
   width: 100%;
 }
-footer p{
-color: rgb(0, 0, 0);
+footer p {
+  color: rgb(0, 0, 0);
 }

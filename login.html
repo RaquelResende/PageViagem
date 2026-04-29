@@ -18,20 +18,25 @@
         <button type="button" id="button" onclick="validarFormulario()">
           Enviar
         </button>
-        <button class="botao_cadastro"   type="button" id="button2" onclick="irparacadastro()"  >
+        <button
+          class="botao_cadastro"
+          type="button"
+          id="button2"
+          onclick="irparacadastro()"
+        >
           Não Tenho Cadastro
         </button>
       </form>
     </div>
     <script>
-     function irparacadastro(){
-      let link = document.createElement("a");
+      function irparacadastro() {
+        let link = document.createElement("a");
 
-      link.href="./cadastro.html";
-      link.textContent = "irParaCadastro"
-      
-      window.location.href = "./cadastro.html"
-     }
+        link.href = "./cadastro.html";
+        link.textContent = "irParaCadastro";
+
+        window.location.href = "./cadastro.html";
+      }
       function validarFormulario() {
         let link = document.createElement("a");
 
@@ -58,7 +63,7 @@
         }
 
         alert("Login realizado com sucesso!");
-        window.location.href = "./pagina2.html";
+        window.location.href = "./home.html";
       }
     </script>
   </body>
