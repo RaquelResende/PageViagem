@@ -1,3 +1,6 @@
+
+
+
 * {
   margin: 0%;
   padding: 0%;
@@ -179,6 +182,7 @@ section {
   padding: 1%;
   margin-top: 30px;
   backdrop-filter: blur(2px);
+  
 }
 .card_procura
  {
@@ -190,7 +194,7 @@ section {
   border-radius: 10px;
   background: rgb(146, 173, 244, 0.2);
   backdrop-filter: blur(2px);
-  width: 30%;
+  width: 10%;
 
 }
 .texto_card {
@@ -198,6 +202,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 3%;
 }
 p {
   padding: 3px;
@@ -225,10 +230,52 @@ h4{
 }
 .conteudo_form_checkbox{
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   margin-top: 20px;
-  text-align: start;
-  margin-left: 48%;
+  text-align: center;
+  margin-left: 45%;
+  gap: 3px
+}
+.conteudo_imag_cads{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10PX;
+
+}
+.Tabela_Precos{
+  /* border-collapse: collapse; */
+  display: flex;
+  justify-content: center;
+  padding-left: 16%;
+  width: 80%;
+  margin: 3%;
+}
+th,td{
+  border: 1px solid #333;
+  text-align: center;
+  padding: 8px;
+}
+h6{
+  font-size: 110%;
+  margin-left: 45%;
+  margin-top: 2%;
+}
+th{
+  background-color: rgb(50, 114, 151);
+  color: rgb(3, 10, 17);
 }
 
-
+footer{
+   padding: 0% 4% 6%;
+  border-radius: 5px;
+  background: rgba(62, 96, 128, 0.3);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  padding-top: 1%;
+  color: #3c3c41;
+}
+footer p{
+color: rgb(0, 0, 0);
+}

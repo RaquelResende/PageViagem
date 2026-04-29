@@ -18,9 +18,20 @@
         <button type="button" id="button" onclick="validarFormulario()">
           Enviar
         </button>
+        <button class="botao_cadastro"   type="button" id="button2" onclick="irparacadastro()"  >
+          Não Tenho Cadastro
+        </button>
       </form>
     </div>
     <script>
+     function irparacadastro(){
+      let link = document.createElement("a");
+
+      link.href="./cadastro.html";
+      link.textContent = "irParaCadastro"
+      
+      window.location.href = "./cadastro.html"
+     }
       function validarFormulario() {
         let link = document.createElement("a");
 

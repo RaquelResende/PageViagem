@@ -6,7 +6,7 @@
 
 body 
 {
-    background-image: url(ceu.png);
+  background-image: url(ceu.png);
   /* background-repeat: no-repeat; */
   font-family: "Times New Roman", Times, serif;
   background-attachment: fixed;
