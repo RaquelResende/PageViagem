@@ -59,3 +59,17 @@ img {
   width: 60px;
   margin-top: 5px;
 }
+
+footer{
+  width: 100%;
+  padding: 6% 1% 8%;
+  background: rgba(62, 96, 128, 0.3);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  padding-top: 1%;
+  color: #3c3c41;
+  width: 100%;
+}
+footer p{
+color: rgb(0, 0, 0);
+}
