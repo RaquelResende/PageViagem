@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./Stylehome.css" />
+     <script src="./home.js" defer></script>
   </head>
   <body>
     <nav>
@@ -13,8 +14,8 @@
         <h2>Atlas Travel</h2>
         <ul>
           <li><a href="./home.html">Home</a></li>
-          <!-- <li><a href="./cadastro.html">Cadastro</a></li> -->
-          <li><a href="orcamento.html">Destino</a></li>
+          <li><a href="orcamento.html">Orçamento</a></li>
+          <li><a href="login.html">Logout</a></li>
         </ul>
       </div>
     </nav>
@@ -28,7 +29,7 @@
       </p>
     </div>
 
-    <section>
+    <section class="cads">
       
       <h3 class="conteudo_titulo_cards">Nossos Serviços</h3>
       <div class="conteudo_principal_cards">
@@ -40,14 +41,25 @@
           />
           <p class="subtitulo_card">Passagem</p>
         </div>
-        <div class="conteudo_card2">
+        <div class="conteudo_card">
           <img class="img_card_2" src="./seguro.png" alt="tiquet de seguros" />
           <p class="subtitulo_card">Seguros</p>
         </div>
-        <div class="conteudo_card3">
+        <div class="conteudo_card">
           <img class="img_card_3" src="./roteiro.png" alt="tiquet de seguros" />
           <p class="subtitulo_card">Roteiros</p>
         </div>
+
+        <div class="conteudo_card">
+          <img class="img_card_3" src="./roteiro.png" alt="tiquet de seguros" />
+          <p class="subtitulo_card">Atrações</p>
+        </div>
+
+        <div class="conteudo_card">
+          <img class="img_card_3" src="./roteiro.png" alt="tiquet de seguros" />
+          <p class="subtitulo_card">Veículos</p>
+        </div>
+
       </div>
     </section>
 
@@ -81,10 +93,9 @@
          <label>
            <input type="checkbox" name="interesse" value="Neve"  id ="check3"/>Neve </label
            ><br />
-           </div>
-         </form>
         </div>
-
+      </form>
+        
     </div>
 
 
@@ -161,51 +172,17 @@
 
       </table>
     </section>
-
+ <section class="conteudo_video">
+  <h5>Olhe mais aqui!</h5>
+  <iframe src="https://www.youtube.com/embed/Mu0kemAsCmU"  src="https://www.youtube.com/embed/Mu0kemAsCmU"
+    title="YouTube video"
+    frameborder="0" ></iframe>
+ </section>
  
 <footer>
 Meu Site - Todos os direitos Reservados - 2026
 <p>Tel: 55(21)9392-9292 | Contato: AtlasTravel@gmai.com </p>
 </footer>
-
-   <script>
-    const checkboxpraia = document.getElementById("check1")
-     const checkboxmonanha = document.getElementById("check2")
-     const checkboxneve = document.getElementById("check3")
-  
-     const campo2 = document.getElementById("campo2")
-     const campo = document.getElementById("campo")
-
-     const campo3 = document.getElementById("campo3")
- 
-    function ataualizar(){
-    if(checkboxpraia.checked  ){
-      (campo.style.display = "block") 
-    }
-     else{
-      (campo.style.display = "none")
-
-    }
-    if(checkboxmonanha.checked){
-    (campo2.style.display = "block")
-
-    }
-    else{
-      (campo2.style.display = "none") 
-    }
-
-    if(checkboxneve.checked){
-      (campo3.style.display= "block")
-    }
-    else{
-      (campo3.style.display = "none")
-    }
-    };
-
-    checkboxmonanha.addEventListener("change", ataualizar);
-    checkboxpraia.addEventListener("change", ataualizar)
-    checkboxneve.addEventListener("change", ataualizar )
-   </script>
 
   </body>
 </html>

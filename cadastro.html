@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./Stylecadastro.css" />
+    <link rel="stylesheet" href="./cadastro.js">
   </head>
   <body>
       <nav>
       <div class="conteudo_nav">
         <img src="./v.png" alt="logo aviao" />
         <ul>
-          <li><a href="pagina2.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
           <li><a href="cadastro.html">Cadastro</a></li>
           <li><a href="destino.html">Destino</a></li>
         </ul>
@@ -50,52 +51,5 @@
     <p>Tel: 55(21)9392-9292 | Contato: AtlasTravel@gmai.com </p>
  </footer>
 
-    <script>
-      function validarCadastro() {
-        let nome = document.getElementById("nome").value;
-        let email = document.getElementById("email").value;
-
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (nome == "" || email == "") {
-          alert("Por favor, preencha os campos ");
-          return;
-        }
-        if (!emailRegex.test(email)) {
-          alert("Por favor, insira um e-mail válido");
-          return;
-        }
-        alert("Cadastro bem sucedido!!");
-        window.location.href = "./login.html";
-      }
-
-      function pesquisaCep() {
-        const cep = document.getElementById("cep").value;
-
-        if (cep.length !== 8) {
-          alert("Cep precisar ter 8 numeros");
-          return;
-        }
-        fetch(`https://viacep.com.br/ws/${cep}/json/`)
-          .then((Response) => {
-            if (!Response.ok) {
-              throw new Error("Erro na requisição" + Response.status);
-            }
-            return Response.json();
-          })
-          .then((dados) => {
-            if (dados.erro) {
-              alert("Esse CEP não foi encontrado ");
-            }
-            document.getElementById("rua").value = dados.logradouro;
-            document.getElementById("bairro").value = dados.bairro;
-            document.getElementById("cidade").value = dados.localidade;
-            document.getElementById("estado").value = dados.uf;
-          })
-          .catch((erro) => {
-            console.log(erro.message);
-          });
-      }
-    </script>
   </body>
 </html>

@@ -15,6 +15,10 @@ nav {
   width: 100%;
   z-index: 1000; /* fica por cima de tudo */
 }
+ h2{
+  margin-top: 20px;
+  margin-right: 65%;
+ }
 .conteudo_nav {
   display: flex;
   flex-direction: row;
@@ -61,25 +65,26 @@ h3{
 
 
 .Form_pincipal {
-  display: flex;
+   display: flex;
   flex-direction: column;
   margin-inline: 34%;
   margin-top: 10%;
-  margin-bottom: 6%;
+  margin-bottom: 10%;
   text-align: start;
   box-shadow: 0px 4px 8px;
   height: 3%;
   width: 30%;
-  background: rgba(45, 82, 82, 0.2); /* transparente */
+  background: rgba(45, 71, 95, 0.2); /* transparente */
   backdrop-filter: blur(2px); /* efeito vidro */
   -webkit-backdrop-filter: blur(10px); /* compatibilidade */
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px; 
+
   
 }
 
 label {
-  font-size: 14px;
+  font-size: 19px;
 }
 input {
   background: transparent;
@@ -90,7 +95,7 @@ input {
 
   padding: 0px 5px;
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 h3 {
   display: flex;
@@ -103,6 +108,7 @@ form {
   width: 90%;
   display: flex;
   flex-direction: column;
+
 }
 button {
   background-color: rgb(37, 65, 108);
@@ -127,7 +133,7 @@ button:active {
 
 footer{
   width: 100%;
-  padding: 6% 1% 8%;
+  padding: 6% 1% 5%;
   background: rgba(62, 96, 128, 0.3);
   backdrop-filter: blur(5px);
   text-align: center;

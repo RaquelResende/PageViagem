@@ -26,7 +26,7 @@ body {
 label {
   display: flex;
   text-align: end;
-  font-size: 14px;
+  font-size: 18px;
   margin-right: 79%;
   margin-top: 2%;
 }
@@ -55,31 +55,35 @@ input {
   border: none;
   border-bottom: 1px solid;
   outline: none;
+  font-size: 120%;
 }
 button {
-  height: 30px;
-  width: 80px;
-  
-  background-color: rgb(66, 116, 190);
+
+  width: 40%;
+  padding: 1%;
+   background-color: rgb(37, 65, 108);
   color: white;
   border-radius: 9px;
   box-shadow: 5px solid floralwhite;
   border: 12px;
-  margin-left: 42%;
+  margin-left: 32%;
   transition: all 0.1s ease;
   cursor: pointer;
-  margin-top: 2px;
+  margin-top: 15px;
 }
 button:active {
   transform: translateY(5px);
   border-bottom: 2px solid #fcfcfc;
 }
 
-button a {
-  text-decoration: none;
+a{
+   text-decoration: none;
+  color: inherit;
+  margin-top: 2%;
+  color: rgb(1, 6, 10);
+   cursor: pointer;
+   margin-left: 5%;
 }
-.botao_cadastro a{
-  text-decoration: none;
- 
-  
+a:hover{
+  color: #fcfcfc;
 }

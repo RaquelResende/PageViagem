@@ -9,8 +9,8 @@ body {
   /* background-repeat: no-repeat; */
   font-family: "Times New Roman", Times, serif;
   background-attachment: fixed;
-  font-size: 110%;
   background-size: 100%;
+  font-size: 130%;
 }
 
 nav {
@@ -20,6 +20,12 @@ nav {
   width: 100%;
   z-index: 1000; /* fica por cima de tudo */
 }
+
+ h2{
+  margin-top: 20px;
+  margin-right: 65%;
+ }
+
 .conteudo_nav {
   display: flex;
   flex-direction: row;
@@ -64,7 +70,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10%;
+  margin-bottom: 15%;
   margin-top: 10%;
   border-radius: 10px;
   box-shadow: 0px 4px 8px;
@@ -73,16 +79,20 @@ img {
   width: 30%;
   height: 50%;
   margin-left: 35%;
+
 }
 .titulo_orçamento {
   margin: 5%;
+  font-size: 150%;
+  
 }
 .form_orçamento {
   display: flex;
   flex-direction: column;
   text-align: start;
   width: 90%;
-  font-size: 15px;
+  font-size: 19px;
+  gap:8px;
 }
 .input data {
   display: flex;
@@ -96,9 +106,9 @@ input {
   color: #474444;
   gap: 3px;
 }
-.input #descricao {
+/* .input #descricao {
   width: 10px;
-}
+} */
 
 .botao_orçamento {
   display: flex;
@@ -112,6 +122,7 @@ input {
   margin-bottom: 4%;
   color: #fff;
   cursor: pointer;
+  padding: 1%;
 
   border: 5px;
 }
